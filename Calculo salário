@@ -1,0 +1,23 @@
+/******************************************************************************
+
+João Vitor do Amaral Fachini
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    float qtdH, sMensal, sHora;
+    printf("Indique a quantidade de Horas: ");
+    scanf("%f", &qtdH);
+    
+    printf("Indique o salário: ");
+    scanf("%f", &sHora);
+
+    sMensal=qtdH*sHora;
+    
+    printf("%f", sMensal);
+    
+    return 0;
+}
+
