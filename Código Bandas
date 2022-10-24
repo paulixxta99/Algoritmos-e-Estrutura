@@ -1,0 +1,71 @@
+/******************************************************************************
+
+João Vitor do Amaral Fachini
+
+*******************************************************************************/
+#include <stdio.h>
+#include <string.h>
+#define TAM 3
+
+typedef struct BANDA
+{
+    char nome[40];
+    char estilo[40];
+    int integ;
+    int rank;
+    char esba[40];
+}BANDA;
+
+void leBanda (BANDA *l)
+{
+    for(int i=0;i<TAM; i++)
+    {
+        printf("\nDigite o nome da Banda: ");   scanf("%s", l[i].nome);
+        printf("Estilo musical: ");             scanf("%s", l[i].estilo);
+        printf("Quantidade de integrantes: ");  scanf("%d",&l[i].integ);
+        printf("Posicao no ranking: ");         scanf("%d",&l[i].rank);
+    }
+}
+
+void exibeBanda (BANDA *e)
+{
+    for(int i=0;i<TAM; i++)
+    {
+        printf("\n\nBanda: %s",e[i].nome);
+        printf("\nEstilo: %s",e[i].estilo);
+        printf("\nIntegrantes: %d",e[i].integ);
+        printf("\nPosicao: %d",e[i].rank);
+    }
+}
+
+void buscaBanda (BANDA *b)
+{
+    char aux[50];
+    int achou=0;
+   
+    printf("\nInforme seu estilo de musica:");
+    scanf("%s", aux);
+    for(int i=0;i<TAM; i++)
+    {
+        if(strcmp(b, b[i].estilo)==0)
+        {
+        achou=1;
+        printf("\nBanda: %s",b[i].estilo);
+        }
+    }
+    if(achou) printf("\n Banda encontrada!");
+    else      printf("\n Banda Ausente!");
+}
+
+int main ()
+{
+    BANDA e[TAM];
+    leBanda (e);
+    printf("\nLista de todas as bandas:\n");
+    exibeBanda (e);
+    buscaBanda (e);
+   
+   
+   
+    return 0;
+}
