@@ -1,0 +1,30 @@
+/******************************************************************************
+
+João Vitor do Amaral Fachini
+*******************************************************************************/
+#include <stdio.h>
+
+int leidade (){
+    int i;
+    printf("Digite sua idade:");
+    scanf("%d",&i);
+    while (i<0 && i>10){
+    printf("DIgite Novamente:");
+    scanf("%d", &i);
+    return i;
+    }
+}
+
+
+int main()
+{
+    int id1, id2, soma;
+    id1 = leidade ();
+    id2 = leidade();
+    soma = id1 -id2;
+    printf("A diferença das idades é de: ");
+    printf("%d",soma);
+    
+
+    return 0;
+}
