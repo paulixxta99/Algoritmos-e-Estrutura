@@ -9,15 +9,14 @@ int main()
 {
     float qtdH, sMensal, sHora;
     printf("Indique a quantidade de Horas: ");
-    scanf("%f", &qtdH);
+    scanf("%f", &qtdH);                                   // recebe quantidade de horas
     
     printf("Indique o salário: ");
-    scanf("%f", &sHora);
+    scanf("%f", &sHora);                                  //recebe a quantidade de salario por hora
 
-    sMensal=qtdH*sHora;
+    sMensal=qtdH*sHora;                                   //calcula o salario mensal
     
-    printf("%f", sMensal);
+    printf("%f", sMensal);                                // mostra na tela o salario mensal
     
     return 0;
 }
-
